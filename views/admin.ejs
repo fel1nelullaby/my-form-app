@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Панель менеджера</h1>
+        
+        <h2>Создать новую форму</h2>
+<form action="/admin/create" method="POST" id="create-form">
+    <input type="text" name="title" placeholder="Название формы (например, Стажировка)" required style="font-weight: bold; font-size: 18px;">
+    
+    <div id="fields-container">
+        <div class="field-group" style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <input type="text" name="fieldLabel" placeholder="Вопрос (например, Ваше имя)" required style="flex: 2;">
+            <select name="fieldType" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="text">Текст</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+    </div>
+
+    <button type="button" onclick="addField()" style="background-color: #2ecc71; margin-bottom: 15px;">+ Добавить еще вопрос</button>
+    
+    <br>
+    <button type="submit" style="background-color: #3498db;">Создать форму</button>
+</form>
+
+<script>
+    function addField() {
+        const container = document.getElementById('fields-container');
+        const newGroup = document.createElement('div');
+        newGroup.className = 'field-group';
+        newGroup.style = 'display: flex; gap: 10px; margin-bottom: 10px;';
+        newGroup.innerHTML = `
+            <input type="text" name="fieldLabel" placeholder="Вопрос" required style="flex: 2;">
+            <select name="fieldType" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="text">Текст</option>
+                <option value="email">Email</option>
+            </select>
+        `;
+        container.appendChild(newGroup);
+    }
+</script>
+
+        <hr style="margin: 30px 0;">
+
+        <h2>Мои формы</h2>
+        <% if (forms.length === 0) { %>
+            <p>Пока нет ни одной формы.</p>
+        <% } else { %>
+            <ul>
+                <% forms.forEach(form => { %>
+                    <li>
+                  <strong><a href="/admin/forms/<%= form.id %>" style="font-size: 18px; text-decoration: none; color: #2c3e50;"><%= form.title %></a></strong><br>
+                        Ссылка: <a href="/form/<%= form.id %>" target="_blank">/form/<%= form.id %></a><br>
+                        Получено ответов: <%= form.responses.length %>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>

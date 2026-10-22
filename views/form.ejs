@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= form.title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= form.title %></h1>
+        <form action="/form/<%= form.id %>" method="POST">
+           <form action="/form/<%= form.id %>" method="POST">
+    <% form.fields.forEach(field => { %>
+        <div>
+            <label><%= field.label %></label><br>
+            <input type="<%= field.type %>" name="<%= field.id %>" required>
+        </div>
+    <% }) %>
+    <button type="submit">Отправить</button>
+</form>
+    </div>
+</body>
+</html>
