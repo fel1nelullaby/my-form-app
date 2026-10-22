@@ -1,73 +1,41 @@
 {
   "forms": [
     {
-      "id": "5b4e273d-56f2-4e0f-b755-3b39f6eb6183",
+      "id": "70bc8be6-056f-4f9f-9c22-e48453e0d680",
       "title": "IT-стажировка",
       "fields": [
         {
-          "id": "name",
-          "label": "Ваше имя?",
-          "type": "text"
-        }
-      ],
-      "responses": [
-        {
-          "answers": {
-            "name": "Алена"
-          },
-          "date": "2026-10-22T09:47:40.349Z"
-        },
-        {
-          "answers": {
-            "name": "анна"
-          },
-          "date": "2026-10-22T10:12:07.509Z"
-        }
-      ]
-    },
-    {
-      "id": "ad6fc7d8-d21d-4175-840c-038144c9f6d7",
-      "title": "Подработка",
-      "fields": [
-        {
           "id": "field_0",
-          "label": "Ваше ФИО?",
+          "label": "Ваше имя",
           "type": "text"
         },
         {
           "id": "field_1",
-          "label": "Место обучения?",
+          "label": "Возраст",
           "type": "text"
         },
         {
           "id": "field_2",
-          "label": "Номер для связи?",
-          "type": "text"
-        },
-        {
-          "id": "field_3",
-          "label": "Электронная почта",
+          "label": "Почта",
           "type": "email"
         }
       ],
       "responses": [
         {
           "answers": {
-            "field_0": "Скороплетова Алена Сергеевна",
-            "field_1": "РГГУ",
-            "field_2": "54960956856",
-            "field_3": "salena150606@gmail.com"
+            "field_0": "Алена",
+            "field_1": "20",
+            "field_2": "salena150606@gmail.com"
           },
-          "date": "2026-10-22T10:07:55.875Z"
+          "date": "2026-10-22T12:18:14.336Z"
         },
         {
           "answers": {
-            "field_0": "Скороплетова Алена Сергеевна",
-            "field_1": "РГГУ",
-            "field_2": "54960956856",
-            "field_3": "salena150606@gmail.com"
+            "field_0": "рита",
+            "field_1": "19",
+            "field_2": "salena150606@gmail.com"
           },
-          "date": "2026-10-22T10:10:43.786Z"
+          "date": "2026-10-22T12:18:41.730Z"
         }
       ]
     }

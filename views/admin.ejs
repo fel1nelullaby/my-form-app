@@ -10,11 +10,11 @@
         
         <h2>Создать новую форму</h2>
 <form action="/admin/create" method="POST" id="create-form">
-    <input type="text" name="title" placeholder="Название формы (например, Стажировка)" required style="font-weight: bold; font-size: 18px;">
+    <input type="text" name="title" placeholder="Название формы (например: Стажировка)" required style="font-weight: bold; font-size: 18px;">
     
     <div id="fields-container">
         <div class="field-group" style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <input type="text" name="fieldLabel" placeholder="Вопрос (например, Ваше имя)" required style="flex: 2;">
+            <input type="text" name="fieldLabel" placeholder="Вопрос (например: Ваше имя)" required style="flex: 2;">
             <select name="fieldType" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 <option value="text">Текст</option>
                 <option value="email">Email</option>
